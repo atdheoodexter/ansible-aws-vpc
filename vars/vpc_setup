@@ -22,5 +22,7 @@ zone3: us-east-2c
 state: present
 
 # Bastion Vars
+
+# Bastion Vars
 bastion_ami: ami-0b0f111b5dcb2800f
 MYIP: 185.67.177.168/32
