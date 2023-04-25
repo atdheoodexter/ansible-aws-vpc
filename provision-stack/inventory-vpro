@@ -13,7 +13,7 @@ web01
 app01
 
 [rmqsrvgrp]
-rmq01 
+rmq01
 
 [mcsrvgrp]
 mc01
