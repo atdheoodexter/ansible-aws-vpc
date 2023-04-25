@@ -1,0 +1,235 @@
+2023-04-25 00:50:00,567 p=3067 u=ubuntu n=ansible | [WARNING]:  * Failed to parse /home/ubuntu/ansible-aws-vpc/provision-stack/inventory-vpro with yaml plugin: We were unable to read either as JSON
+nor YAML, these are the errors we got from each: JSON: Expecting value: line 1 column 1 (char 0)  Syntax Error while loading YAML.   could not
+find expected ':'  The error appears to be in '/home/ubuntu/ansible-aws-vpc/provision-stack/inventory-vpro': line 9, column 1, but may be
+elsewhere in the file depending on the exact syntax problem.  The offending line appears to be:   [websrvgrp] ^ here
+
+2023-04-25 00:50:00,568 p=3067 u=ubuntu n=ansible | [WARNING]:  * Failed to parse /home/ubuntu/ansible-aws-vpc/provision-stack/inventory-vpro with ini plugin: Invalid host pattern 'web01_ip:'
+supplied, ending in ':' is not allowed, this character is reserved to provide a port.
+
+2023-04-25 00:50:00,568 p=3067 u=ubuntu n=ansible | [WARNING]: Unable to parse /home/ubuntu/ansible-aws-vpc/provision-stack/inventory-vpro as an inventory source
+
+2023-04-25 00:50:00,568 p=3067 u=ubuntu n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2023-04-25 00:50:00,572 p=3067 u=ubuntu n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2023-04-25 00:50:00,747 p=3067 u=ubuntu n=ansible | PLAY [Generate artifact, copy artifact & sql file to files directory] *****************************************************************************
+2023-04-25 00:50:00,757 p=3067 u=ubuntu n=ansible | TASK [Gathering Facts] ****************************************************************************************************************************
+2023-04-25 00:50:02,178 p=3067 u=ubuntu n=ansible | ok: [localhost]
+2023-04-25 00:50:02,194 p=3067 u=ubuntu n=ansible | TASK [Install jdk, maven, git] ********************************************************************************************************************
+2023-04-25 00:50:04,896 p=3067 u=ubuntu n=ansible | ok: [localhost] => (item=git)
+2023-04-25 00:50:46,064 p=3067 u=ubuntu n=ansible | changed: [localhost] => (item=openjdk-8-jdk)
+2023-04-25 00:50:56,593 p=3067 u=ubuntu n=ansible | changed: [localhost] => (item=maven)
+2023-04-25 00:50:56,609 p=3067 u=ubuntu n=ansible | TASK [Clone source code from github] **************************************************************************************************************
+2023-04-25 00:51:01,024 p=3067 u=ubuntu n=ansible | changed: [localhost]
+2023-04-25 00:51:01,039 p=3067 u=ubuntu n=ansible | TASK [mvn install command to build artifact] ******************************************************************************************************
+2023-04-25 00:51:42,836 p=3067 u=ubuntu n=ansible | changed: [localhost]
+2023-04-25 00:51:42,863 p=3067 u=ubuntu n=ansible | TASK [Copy artifacts to file directory] ***********************************************************************************************************
+2023-04-25 00:51:44,150 p=3067 u=ubuntu n=ansible | changed: [localhost] => (item=/home/ubuntu/ansible-aws-vpc/provision-stack/Vprofile-repo/target/vprofile-v2.war)
+2023-04-25 00:51:44,161 p=3067 u=ubuntu n=ansible | TASK [Copy SQL file to files directory] ***********************************************************************************************************
+2023-04-25 00:51:44,604 p=3067 u=ubuntu n=ansible | changed: [localhost]
+2023-04-25 00:51:44,620 p=3067 u=ubuntu n=ansible | PLAY RECAP ****************************************************************************************************************************************
+2023-04-25 00:51:44,620 p=3067 u=ubuntu n=ansible | localhost                  : ok=6    changed=5    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-04-25 01:04:15,654 p=8157 u=ubuntu n=ansible | [WARNING]:  * Failed to parse /home/ubuntu/ansible-aws-vpc/provision-stack/inventory-vpro with yaml plugin: We were unable to read either as JSON
+nor YAML, these are the errors we got from each: JSON: Expecting value: line 1 column 1 (char 0)  Syntax Error while loading YAML.   could not
+find expected ':'  The error appears to be in '/home/ubuntu/ansible-aws-vpc/provision-stack/inventory-vpro': line 9, column 1, but may be
+elsewhere in the file depending on the exact syntax problem.  The offending line appears to be:   [websrvgrp] ^ here
+
+2023-04-25 01:04:15,654 p=8157 u=ubuntu n=ansible | [WARNING]:  * Failed to parse /home/ubuntu/ansible-aws-vpc/provision-stack/inventory-vpro with ini plugin: Invalid host pattern 'web01_ip:'
+supplied, ending in ':' is not allowed, this character is reserved to provide a port.
+
+2023-04-25 01:04:15,655 p=8157 u=ubuntu n=ansible | [WARNING]: Unable to parse /home/ubuntu/ansible-aws-vpc/provision-stack/inventory-vpro as an inventory source
+
+2023-04-25 01:04:15,655 p=8157 u=ubuntu n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2023-04-25 01:04:15,673 p=8157 u=ubuntu n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2023-04-25 01:04:16,177 p=8157 u=ubuntu n=ansible | PLAY [Set host to ip mapping in /etc/hosts file of all the instances in the stack] ****************************************************************
+2023-04-25 01:04:16,177 p=8157 u=ubuntu n=ansible | skipping: no hosts matched
+2023-04-25 01:04:16,178 p=8157 u=ubuntu n=ansible | PLAY RECAP ****************************************************************************************************************************************
+2023-04-25 01:04:49,864 p=8161 u=ubuntu n=ansible | [WARNING]:  * Failed to parse /home/ubuntu/ansible-aws-vpc/provision-stack/inventory-vpro with yaml plugin: We were unable to read either as JSON
+nor YAML, these are the errors we got from each: JSON: Expecting value: line 1 column 1 (char 0)  Syntax Error while loading YAML.   could not
+find expected ':'  The error appears to be in '/home/ubuntu/ansible-aws-vpc/provision-stack/inventory-vpro': line 9, column 1, but may be
+elsewhere in the file depending on the exact syntax problem.  The offending line appears to be:   [websrvgrp] ^ here
+
+2023-04-25 01:04:49,864 p=8161 u=ubuntu n=ansible | [WARNING]:  * Failed to parse /home/ubuntu/ansible-aws-vpc/provision-stack/inventory-vpro with ini plugin: Invalid host pattern 'web01_ip:'
+supplied, ending in ':' is not allowed, this character is reserved to provide a port.
+
+2023-04-25 01:04:49,864 p=8161 u=ubuntu n=ansible | [WARNING]: Unable to parse /home/ubuntu/ansible-aws-vpc/provision-stack/inventory-vpro as an inventory source
+
+2023-04-25 01:04:49,865 p=8161 u=ubuntu n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2023-04-25 01:04:49,868 p=8161 u=ubuntu n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2023-04-25 01:04:50,033 p=8161 u=ubuntu n=ansible | PLAY [Set host to ip mapping in /etc/hosts file of all the instances in the stack] ****************************************************************
+2023-04-25 01:04:50,034 p=8161 u=ubuntu n=ansible | skipping: no hosts matched
+2023-04-25 01:04:50,034 p=8161 u=ubuntu n=ansible | PLAY RECAP ****************************************************************************************************************************************
+2023-04-25 01:06:25,446 p=8194 u=ubuntu n=ansible | [WARNING]:  * Failed to parse /home/ubuntu/ansible-aws-vpc/provision-stack/inventory-vpro with yaml plugin: We were unable to read either as JSON
+nor YAML, these are the errors we got from each: JSON: Expecting value: line 1 column 1 (char 0)  Syntax Error while loading YAML.   could not
+find expected ':'  The error appears to be in '/home/ubuntu/ansible-aws-vpc/provision-stack/inventory-vpro': line 9, column 1, but may be
+elsewhere in the file depending on the exact syntax problem.  The offending line appears to be:   [websrvgrp] ^ here
+
+2023-04-25 01:06:25,446 p=8194 u=ubuntu n=ansible | [WARNING]:  * Failed to parse /home/ubuntu/ansible-aws-vpc/provision-stack/inventory-vpro with ini plugin: Invalid host pattern 'web01_ip:'
+supplied, ending in ':' is not allowed, this character is reserved to provide a port.
+
+2023-04-25 01:06:25,446 p=8194 u=ubuntu n=ansible | [WARNING]: Unable to parse /home/ubuntu/ansible-aws-vpc/provision-stack/inventory-vpro as an inventory source
+
+2023-04-25 01:06:25,447 p=8194 u=ubuntu n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2023-04-25 01:06:25,450 p=8194 u=ubuntu n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2023-04-25 01:06:25,612 p=8194 u=ubuntu n=ansible | PLAY [Set host to ip mapping in /etc/hosts file of all the instances in the stack] ****************************************************************
+2023-04-25 01:06:25,612 p=8194 u=ubuntu n=ansible | skipping: no hosts matched
+2023-04-25 01:06:25,613 p=8194 u=ubuntu n=ansible | PLAY RECAP ****************************************************************************************************************************************
+2023-04-25 01:18:46,902 p=8233 u=ubuntu n=ansible | [WARNING]:  * Failed to parse /home/ubuntu/ansible-aws-vpc/provision-stack/inventory-vpro with yaml plugin: We were unable to read either as JSON
+nor YAML, these are the errors we got from each: JSON: Expecting value: line 1 column 1 (char 0)  Syntax Error while loading YAML.   could not
+find expected ':'  The error appears to be in '/home/ubuntu/ansible-aws-vpc/provision-stack/inventory-vpro': line 9, column 1, but may be
+elsewhere in the file depending on the exact syntax problem.  The offending line appears to be:   [websrvgrp] ^ here
+
+2023-04-25 01:18:46,902 p=8233 u=ubuntu n=ansible | [WARNING]:  * Failed to parse /home/ubuntu/ansible-aws-vpc/provision-stack/inventory-vpro with ini plugin: Invalid host pattern 'web01_ip:'
+supplied, ending in ':' is not allowed, this character is reserved to provide a port.
+
+2023-04-25 01:18:46,902 p=8233 u=ubuntu n=ansible | [WARNING]: Unable to parse /home/ubuntu/ansible-aws-vpc/provision-stack/inventory-vpro as an inventory source
+
+2023-04-25 01:18:46,903 p=8233 u=ubuntu n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2023-04-25 01:18:46,906 p=8233 u=ubuntu n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2023-04-25 01:18:47,076 p=8233 u=ubuntu n=ansible | PLAY [Set host to ip mapping in /etc/hosts file of all the instances in the stack] ****************************************************************
+2023-04-25 01:18:47,077 p=8233 u=ubuntu n=ansible | skipping: no hosts matched
+2023-04-25 01:18:47,077 p=8233 u=ubuntu n=ansible | PLAY RECAP ****************************************************************************************************************************************
+2023-04-25 01:24:03,805 p=8316 u=ubuntu n=ansible | [WARNING]:  * Failed to parse /home/ubuntu/ansible-aws-vpc/provision-stack/inventory-vpro with yaml plugin: We were unable to read either as JSON
+nor YAML, these are the errors we got from each: JSON: Expecting value: line 1 column 1 (char 0)  Syntax Error while loading YAML.   could not
+find expected ':'  The error appears to be in '/home/ubuntu/ansible-aws-vpc/provision-stack/inventory-vpro': line 9, column 1, but may be
+elsewhere in the file depending on the exact syntax problem.  The offending line appears to be:   [websrvgrp] ^ here
+
+2023-04-25 01:24:03,805 p=8316 u=ubuntu n=ansible | [WARNING]:  * Failed to parse /home/ubuntu/ansible-aws-vpc/provision-stack/inventory-vpro with ini plugin: Invalid host pattern 'web01_ip:'
+supplied, ending in ':' is not allowed, this character is reserved to provide a port.
+
+2023-04-25 01:24:03,806 p=8316 u=ubuntu n=ansible | [WARNING]: Unable to parse /home/ubuntu/ansible-aws-vpc/provision-stack/inventory-vpro as an inventory source
+
+2023-04-25 01:24:03,806 p=8316 u=ubuntu n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2023-04-25 01:24:03,810 p=8316 u=ubuntu n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2023-04-25 01:24:03,973 p=8316 u=ubuntu n=ansible | PLAY [Set host to ip mapping in /etc/hosts file of all the instances in the stack] ****************************************************************
+2023-04-25 01:24:03,973 p=8316 u=ubuntu n=ansible | skipping: no hosts matched
+2023-04-25 01:24:03,973 p=8316 u=ubuntu n=ansible | PLAY RECAP ****************************************************************************************************************************************
+2023-04-25 01:27:56,323 p=8351 u=ubuntu n=ansible | [WARNING]:  * Failed to parse /home/ubuntu/ansible-aws-vpc/provision-stack/inventory-vpro with yaml plugin: We were unable to read either as JSON
+nor YAML, these are the errors we got from each: JSON: Expecting value: line 1 column 1 (char 0)  Syntax Error while loading YAML.   could not
+find expected ':'  The error appears to be in '/home/ubuntu/ansible-aws-vpc/provision-stack/inventory-vpro': line 9, column 1, but may be
+elsewhere in the file depending on the exact syntax problem.  The offending line appears to be:   [websrvgrp] ^ here
+
+2023-04-25 01:27:56,323 p=8351 u=ubuntu n=ansible | [WARNING]:  * Failed to parse /home/ubuntu/ansible-aws-vpc/provision-stack/inventory-vpro with ini plugin: Invalid host pattern 'web01_ip:'
+supplied, ending in ':' is not allowed, this character is reserved to provide a port.
+
+2023-04-25 01:27:56,324 p=8351 u=ubuntu n=ansible | [WARNING]: Unable to parse /home/ubuntu/ansible-aws-vpc/provision-stack/inventory-vpro as an inventory source
+
+2023-04-25 01:27:56,324 p=8351 u=ubuntu n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2023-04-25 01:27:56,328 p=8351 u=ubuntu n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2023-04-25 01:27:56,496 p=8351 u=ubuntu n=ansible | PLAY [Set host to ip mapping in /etc/hosts file of all the instances in the stack] ****************************************************************
+2023-04-25 01:27:56,497 p=8351 u=ubuntu n=ansible | skipping: no hosts matched
+2023-04-25 01:27:56,497 p=8351 u=ubuntu n=ansible | PLAY RECAP ****************************************************************************************************************************************
+2023-04-25 01:29:11,962 p=8368 u=ubuntu n=ansible | [WARNING]:  * Failed to parse /home/ubuntu/ansible-aws-vpc/provision-stack/inventory-vpro with yaml plugin: We were unable to read either as JSON
+nor YAML, these are the errors we got from each: JSON: Expecting value: line 1 column 1 (char 0)  Syntax Error while loading YAML.   could not
+find expected ':'  The error appears to be in '/home/ubuntu/ansible-aws-vpc/provision-stack/inventory-vpro': line 9, column 1, but may be
+elsewhere in the file depending on the exact syntax problem.  The offending line appears to be:   [websrvgrp] ^ here
+
+2023-04-25 01:29:11,962 p=8368 u=ubuntu n=ansible | [WARNING]:  * Failed to parse /home/ubuntu/ansible-aws-vpc/provision-stack/inventory-vpro with ini plugin: Invalid host pattern 'web01_ip:'
+supplied, ending in ':' is not allowed, this character is reserved to provide a port.
+
+2023-04-25 01:29:11,963 p=8368 u=ubuntu n=ansible | [WARNING]: Unable to parse /home/ubuntu/ansible-aws-vpc/provision-stack/inventory-vpro as an inventory source
+
+2023-04-25 01:29:11,963 p=8368 u=ubuntu n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2023-04-25 01:29:11,966 p=8368 u=ubuntu n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2023-04-25 01:29:12,128 p=8368 u=ubuntu n=ansible | PLAY [Set host to ip mapping in /etc/hosts file of all the instances in the stack] ****************************************************************
+2023-04-25 01:29:12,129 p=8368 u=ubuntu n=ansible | skipping: no hosts matched
+2023-04-25 01:29:12,129 p=8368 u=ubuntu n=ansible | PLAY RECAP ****************************************************************************************************************************************
+2023-04-25 01:31:41,983 p=8393 u=ubuntu n=ansible | [WARNING]:  * Failed to parse /home/ubuntu/ansible-aws-vpc/provision-stack/inventory-vpro with yaml plugin: We were unable to read either as JSON
+nor YAML, these are the errors we got from each: JSON: Expecting value: line 1 column 1 (char 0)  Syntax Error while loading YAML.   could not
+find expected ':'  The error appears to be in '/home/ubuntu/ansible-aws-vpc/provision-stack/inventory-vpro': line 9, column 1, but may be
+elsewhere in the file depending on the exact syntax problem.  The offending line appears to be:   [websrvgrp] ^ here
+
+2023-04-25 01:31:41,984 p=8393 u=ubuntu n=ansible | [WARNING]:  * Failed to parse /home/ubuntu/ansible-aws-vpc/provision-stack/inventory-vpro with ini plugin: Invalid host pattern 'web01_ip:'
+supplied, ending in ':' is not allowed, this character is reserved to provide a port.
+
+2023-04-25 01:31:41,984 p=8393 u=ubuntu n=ansible | [WARNING]: Unable to parse /home/ubuntu/ansible-aws-vpc/provision-stack/inventory-vpro as an inventory source
+
+2023-04-25 01:31:41,984 p=8393 u=ubuntu n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2023-04-25 01:31:41,988 p=8393 u=ubuntu n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2023-04-25 01:31:42,149 p=8393 u=ubuntu n=ansible | PLAY [Set host to ip mapping in /etc/hosts file of all the instances in the stack] ****************************************************************
+2023-04-25 01:31:42,150 p=8393 u=ubuntu n=ansible | skipping: no hosts matched
+2023-04-25 01:31:42,150 p=8393 u=ubuntu n=ansible | PLAY RECAP ****************************************************************************************************************************************
+2023-04-25 01:32:23,783 p=8432 u=ubuntu n=ansible | [WARNING]:  * Failed to parse /home/ubuntu/ansible-aws-vpc/provision-stack/inventory-vpro with yaml plugin: We were unable to read either as JSON
+nor YAML, these are the errors we got from each: JSON: Expecting value: line 1 column 1 (char 0)  Syntax Error while loading YAML.   could not
+find expected ':'  The error appears to be in '/home/ubuntu/ansible-aws-vpc/provision-stack/inventory-vpro': line 9, column 1, but may be
+elsewhere in the file depending on the exact syntax problem.  The offending line appears to be:   [websrvgrp] ^ here
+
+2023-04-25 01:32:23,783 p=8432 u=ubuntu n=ansible | [WARNING]:  * Failed to parse /home/ubuntu/ansible-aws-vpc/provision-stack/inventory-vpro with ini plugin: Invalid host pattern 'web01_ip:'
+supplied, ending in ':' is not allowed, this character is reserved to provide a port.
+
+2023-04-25 01:32:23,784 p=8432 u=ubuntu n=ansible | [WARNING]: Unable to parse /home/ubuntu/ansible-aws-vpc/provision-stack/inventory-vpro as an inventory source
+
+2023-04-25 01:32:23,784 p=8432 u=ubuntu n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2023-04-25 01:32:23,788 p=8432 u=ubuntu n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2023-04-25 01:32:23,960 p=8432 u=ubuntu n=ansible | PLAY [Set host to ip mapping in /etc/hosts file of all the instances in the stack] ****************************************************************
+2023-04-25 01:32:23,960 p=8432 u=ubuntu n=ansible | skipping: no hosts matched
+2023-04-25 01:32:23,960 p=8432 u=ubuntu n=ansible | PLAY RECAP ****************************************************************************************************************************************
+2023-04-25 01:36:34,418 p=8475 u=ubuntu n=ansible | [WARNING]:  * Failed to parse /home/ubuntu/ansible-aws-vpc/provision-stack/inventory-vpro with yaml plugin: We were unable to read either as JSON
+nor YAML, these are the errors we got from each: JSON: Expecting value: line 1 column 1 (char 0)  Syntax Error while loading YAML.   could not
+find expected ':'  The error appears to be in '/home/ubuntu/ansible-aws-vpc/provision-stack/inventory-vpro': line 9, column 1, but may be
+elsewhere in the file depending on the exact syntax problem.  The offending line appears to be:   [websrvgrp] ^ here
+
+2023-04-25 01:36:34,418 p=8475 u=ubuntu n=ansible | [WARNING]:  * Failed to parse /home/ubuntu/ansible-aws-vpc/provision-stack/inventory-vpro with ini plugin: Invalid host pattern 'web01_ip:'
+supplied, ending in ':' is not allowed, this character is reserved to provide a port.
+
+2023-04-25 01:36:34,419 p=8475 u=ubuntu n=ansible | [WARNING]: Unable to parse /home/ubuntu/ansible-aws-vpc/provision-stack/inventory-vpro as an inventory source
+
+2023-04-25 01:36:34,419 p=8475 u=ubuntu n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2023-04-25 01:36:34,422 p=8475 u=ubuntu n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2023-04-25 01:36:34,583 p=8475 u=ubuntu n=ansible | PLAY [Set host to ip mapping in /etc/hosts file of all the instances in the stack] ****************************************************************
+2023-04-25 01:36:34,583 p=8475 u=ubuntu n=ansible | skipping: no hosts matched
+2023-04-25 01:36:34,583 p=8475 u=ubuntu n=ansible | PLAY RECAP ****************************************************************************************************************************************
+2023-04-25 01:38:47,348 p=8484 u=ubuntu n=ansible | [WARNING]:  * Failed to parse /home/ubuntu/ansible-aws-vpc/provision-stack/inventory-vpro with yaml plugin: We were unable to read either as JSON
+nor YAML, these are the errors we got from each: JSON: Expecting value: line 1 column 1 (char 0)  Syntax Error while loading YAML.   could not
+find expected ':'  The error appears to be in '/home/ubuntu/ansible-aws-vpc/provision-stack/inventory-vpro': line 9, column 1, but may be
+elsewhere in the file depending on the exact syntax problem.  The offending line appears to be:   [websrvgrp] ^ here
+
+2023-04-25 01:38:47,348 p=8484 u=ubuntu n=ansible | [WARNING]:  * Failed to parse /home/ubuntu/ansible-aws-vpc/provision-stack/inventory-vpro with ini plugin: Invalid host pattern 'web01_ip:'
+supplied, ending in ':' is not allowed, this character is reserved to provide a port.
+
+2023-04-25 01:38:47,349 p=8484 u=ubuntu n=ansible | [WARNING]: Unable to parse /home/ubuntu/ansible-aws-vpc/provision-stack/inventory-vpro as an inventory source
+
+2023-04-25 01:38:47,349 p=8484 u=ubuntu n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2023-04-25 01:38:47,353 p=8484 u=ubuntu n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2023-04-25 01:38:47,514 p=8484 u=ubuntu n=ansible | PLAY [Set host to ip mapping in /etc/hosts file of all the instances in the stack] ****************************************************************
+2023-04-25 01:38:47,515 p=8484 u=ubuntu n=ansible | skipping: no hosts matched
+2023-04-25 01:38:47,515 p=8484 u=ubuntu n=ansible | PLAY RECAP ****************************************************************************************************************************************
+2023-04-25 01:40:42,603 p=8501 u=ubuntu n=ansible | [WARNING]:  * Failed to parse /home/ubuntu/ansible-aws-vpc/provision-stack/inventory-vpro with yaml plugin: We were unable to read either as JSON
+nor YAML, these are the errors we got from each: JSON: Expecting value: line 1 column 1 (char 0)  Syntax Error while loading YAML.   could not
+find expected ':'  The error appears to be in '/home/ubuntu/ansible-aws-vpc/provision-stack/inventory-vpro': line 9, column 1, but may be
+elsewhere in the file depending on the exact syntax problem.  The offending line appears to be:   [websrvgrp] ^ here
+
+2023-04-25 01:40:42,603 p=8501 u=ubuntu n=ansible | [WARNING]:  * Failed to parse /home/ubuntu/ansible-aws-vpc/provision-stack/inventory-vpro with ini plugin: Invalid host pattern 'web01_ip:'
+supplied, ending in ':' is not allowed, this character is reserved to provide a port.
+
+2023-04-25 01:40:42,603 p=8501 u=ubuntu n=ansible | [WARNING]: Unable to parse /home/ubuntu/ansible-aws-vpc/provision-stack/inventory-vpro as an inventory source
+
+2023-04-25 01:40:42,604 p=8501 u=ubuntu n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2023-04-25 01:40:42,607 p=8501 u=ubuntu n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2023-04-25 01:40:42,771 p=8501 u=ubuntu n=ansible | PLAY [Set host to ip mapping in /etc/hosts file of all the instances in the stack] ****************************************************************
+2023-04-25 01:40:42,772 p=8501 u=ubuntu n=ansible | skipping: no hosts matched
+2023-04-25 01:40:42,772 p=8501 u=ubuntu n=ansible | PLAY RECAP ****************************************************************************************************************************************
